@@ -13,7 +13,8 @@ except:
 #Funcion piramide
 def piramide(bloques):
     contador = 0
-    bloquesPuestos= int(bloques)
+    #variable para llevar el numero de bloques puestos
+    bloquesPuestos= int(bloques) 
 
 
     if bloques > 0:

@@ -46,9 +46,13 @@ def palindromo(cadena):
 
 #elegimos la funcion a utilizar y enviamos los valores de sus parametros
 if(opcion==1):
-    nBloques = int(input("Por favor ingrese el numero de bloques de su piramide:"))
-    piramide(nBloques)
+    try:
+        nBloques = int(input("Por favor ingrese el numero de bloques de su piramide:"))
+        piramide(nBloques)
+    except:
+        print("Ingreso un tipo de dato no valido, vuelva a iniciar el programa")
+        quit()
 
 else:
-    palabra = input("Digite la palabra para verificar si es palindromo: ")
-    palindromo(palabra)
+        palabra = input("Digite la palabra para verificar si es palindromo: ")
+        palindromo(palabra)

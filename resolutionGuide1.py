@@ -2,7 +2,7 @@
 
 #El usuario nos indica la operacion a realizar y capturamos el error al ingresar cualquier trcla y cerramos el programa
 try:
-    opcion = int(input("Por favor ingrese el numero de la operacion que desea realizar\n1.Piramide\n2.\n#.cualquier tecla para salir\nopcion: "))
+    opcion = int(input("Por favor ingrese el numero de la operacion que desea realizar\n1.Piramide\n2.Palindromo\n#.cualquier tecla para salir\nopcion: "))
 
 except:
     print("Adios")
@@ -34,7 +34,21 @@ def piramide(bloques):
         print("El numero tiene que ser mayor a 0")
 
 
+#Funcion palindromo
+def palindromo(cadena):
+    palabraPrueba = "".join(list(reversed(cadena)))
+
+    if str(cadena).lower().replace(" ","") == palabraPrueba.lower().replace(" ",""):
+        print("Es palindromo")
+    else:
+        print("no es palindromo")
+
+
 #elegimos la funcion a utilizar y enviamos los valores de sus parametros
 if(opcion==1):
     nBloques = int(input("Por favor ingrese el numero de bloques de su piramide:"))
     piramide(nBloques)
+
+else:
+    palabra = input("Digite la palabra para verificar si es palindromo: ")
+    palindromo(palabra)

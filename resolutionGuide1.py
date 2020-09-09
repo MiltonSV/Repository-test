@@ -36,9 +36,7 @@ def piramide(bloques):
 
 #Funcion palindromo
 def palindromo(cadena):
-    palabraPrueba = "".join(list(reversed(cadena)))
-
-    if str(cadena).lower().replace(" ","") == palabraPrueba.lower().replace(" ",""):
+    if str(cadena) == str(cadena)[::-1]:
         print("Es palindromo")
     else:
         print("no es palindromo")
